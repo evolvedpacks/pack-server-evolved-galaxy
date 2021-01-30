@@ -1,0 +1,15 @@
+[
+
+    {
+
+        "sourceFilePath": "server.properties",
+
+        "destinationFilePath": "server.properties",
+
+        "clientSide": false,
+
+        "serverSide": true
+
+    }
+
+]

@@ -1,0 +1,85 @@
+name: CD Tags
+
+on:
+  push:
+    tags:
+    - '*'
+
+jobs:
+
+  build-release:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+    
+    - name: Set up Hub
+      run: sudo snap install hub --classic
+
+    - name: Set up Zip
+      run: sudo apt install -y zip
+
+    - name: Repository Checkout
+      uses: actions/checkout@v2
+
+    - name: Create EULA and Version Files
+      run: |
+        echo "eula=true" > ./eula.txt
+        echo "$(git describe --tags --abbrev=0)" > ./version.txt
+
+    - name: Assemble Zip
+      run: |
+        zip -r -9 evg-server-$(git describe --tags --abbrev=0).zip \
+          config/** mods/** libraries/** eula.txt version.txt forge-* \
+          minecraft_server.1.12.2.jar server-icon.png
+
+    - name: Assemble TGZ
+      run: |
+        tar -czvf evg-server-$(git describe --tags --abbrev=0).tar.gz \
+          config/** mods/** libraries/** eula.txt version.txt forge-* \
+          minecraft_server.1.12.2.jar server-icon.png  
+
+    - name: Deploy to Releases
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: 'hub release create
+          -a ./evg-server-$(git describe --tags --abbrev=0).zip
+          -a ./evg-server-$(git describe --tags --abbrev=0).tar.gz
+          -F ./CHANGELOG.md
+          $(git describe --tags --abbrev=0)'
+
+    - name: Deploy to Download Trunk
+      env:
+        CDN_UPLOAD_SECRET: ${{ secrets.CDN_UPLOAD_SECRET }}
+      run: |
+        curl \
+          -X PUT \
+          -H "Authorization: Basic $CDN_UPLOAD_SECRET" \
+          -F "file=@evg-server-$(git describe --tags --abbrev=0).zip" \
+          https://cdn.zekro.de/modpacks/evolved-galaxy/trunk/server/latest.zip
+
+
+  build-image:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Repository Checkout
+      uses: actions/checkout@v2
+
+    - name: Docker Build
+      run: |
+        TAG=$(git describe --tags --abbrev=0)
+        docker build . \
+          --build-arg VERSION=$(git describe --tags --abbrev=0) \
+          -t evolvedpacks/evg:${TAG%+*} \
+          -t evolvedpacks/evg:latest \
+          -f .docker/Dockerfile
+
+    - name: Docker Push
+      run: |
+        TAG=$(git describe --tags --abbrev=0)
+        docker login -u zekro -p ${{ secrets.DOCKER_PASSWORD }}
+        docker push evolvedpacks/evg:${TAG%+*}
+        docker push evolvedpacks/evg:latest

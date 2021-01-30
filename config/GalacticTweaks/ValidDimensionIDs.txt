@@ -1,0 +1,39 @@
+
+This file is regenerated every time minecraft is ran to handle any addons added or removed
+
+| ### PLANETS ###
+|------------------
+| Overworld                     0
+| Mars                        -29
+| Asteroids                   -30
+| Venus                       -31
+| Mercury                   -1005
+| Ceres                     -1007
+| Pluto                     -1008
+| Kuiper Belt               -1009
+| Haumea                    -1023
+| Proxima B                 -1025
+| Barnarda C                -1030
+| Diona                     -2542
+| Chalos                    -2543
+| Nibiru                    -2544
+| Fronos                    -2545
+| Yz Ceti B                 -4101
+| Yz Ceti C                 -4102
+| Yz Ceti D                 -4103
+| Trappist 1 C              -4502
+| Trappist 1 E              -4504
+
+
+| ### MOONS ###
+|------------------
+| Moon                        -28
+| Io                        -1014
+| Europa                    -1015
+| Ganymede                  -1016
+| Enceladus                 -1017
+| Titan                     -1018
+| Triton                    -1021
+| Callisto                  -1022
+| Miranda                   -1024
+| Koentus                   -2642
