@@ -1,6 +1,6 @@
 <h1><img height="24" src="https://cdn.technicpack.net/platform2/pack-icons/1799882.png"/> EV.GALAXY</h1>
 
-[![](https://img.shields.io/badge/ON-TECHNICPACK.NET-cyan?style=for-the-badge)](https://www.technicpack.net/modpack/evinfinity)
+[![](https://img.shields.io/badge/ON-TECHNICPACK.NET-cyan?style=for-the-badge)](https://www.technicpack.net/modpack/evgalaxy)
 
 ## General Information
 
