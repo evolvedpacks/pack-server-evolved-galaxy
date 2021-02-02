@@ -1,3 +1,8 @@
-1.2.0+10
+1.2.1+12
 
-• update mod Alchemistry
+• add mod JEI
+
+• add config JEI
+
+• update config Galacticraft
+• update config Galacticraft Tweaks
