@@ -1,8 +1,4 @@
-1.2.1+12
+1.3.0+14
 
-• add mod JEI
-
-• add config JEI
-
-• update config Galacticraft
-• update config Galacticraft Tweaks
+• update mod Extreme Reactors
+• update mod Zero Core
