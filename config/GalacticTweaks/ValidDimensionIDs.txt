@@ -14,6 +14,7 @@ This file is regenerated every time minecraft is ran to handle any addons added 
 | Haumea                    -1023
 | Proxima B                 -1025
 | Barnarda C                -1030
+| Tau Ceti F                -1338
 | Diona                     -2542
 | Chalos                    -2543
 | Nibiru                    -2544
