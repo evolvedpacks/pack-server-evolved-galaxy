@@ -1,3 +1,3 @@
-1.5.0+20
+1.6.0+22
 
-• update mod Ore Stone Variants
+• update config Ore Stone Variants
