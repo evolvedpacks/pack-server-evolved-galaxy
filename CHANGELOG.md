@@ -1,5 +1,4 @@
-1.8.0+28
+1.9.0+30
 
-• update mod Asmodeus Core
-• update mod Galaxy Space
-• update mod Steve Kun G's Lib
+• update mod Mystical Lib
+• update mod Ore Stone Variants
