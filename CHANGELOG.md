@@ -1,11 +1,6 @@
-1.10.0+32
+1.11.0+34
 
-• add mod Floralis
+• update mod Floralis
+• update mod JAOPCA
 
-• add config Floralis
-
-• update mod Lazy Applied Energistics 2
-
-• remove mod Pam's Weee! Flowers
-
-• remove config Pam's Weee! Flowers
+• update config Floralis
