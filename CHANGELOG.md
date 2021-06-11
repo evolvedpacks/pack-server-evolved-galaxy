@@ -1,10 +1,4 @@
-1.15.0+42
+1.16.0+44
 
-• update mod Draconic Additions
-• update mod Foam Fix
 • update mod Floralis
-• update mod Ore Stone Variants
-
-• update config Draconic Additions
-• update config Foam Fix
-• update config Ore Stone Variants
+• update mod Reborn Core
