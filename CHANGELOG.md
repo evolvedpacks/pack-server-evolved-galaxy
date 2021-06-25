@@ -1,4 +1,7 @@
-1.16.0+44
+1.17.0+46
 
-• update mod Floralis
-• update mod Reborn Core
+• update mod Asmodeus Core
+• update mod ATOP
+• update mod Hammer Core
+
+• update config Asmodeus Core
