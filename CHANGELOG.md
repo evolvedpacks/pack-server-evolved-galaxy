@@ -1,12 +1,9 @@
-1.24.0+64
+1.25.0+66
 
-• add mod HWYLA
-
-• add config HWYLA
-
-• update dependecy Forge
-
-• update mod Biomes O Plenty
 • update mod Floralis
+• update mod More Planets
+• update mod Steve Kun G's Lib
 
-• fix #1
+• add mod Energy Meters
+• add mod Mixin Booter
+• add mod Open Computers Block Replacer
